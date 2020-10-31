@@ -18,3 +18,4 @@ CREATE TABLE fweets (
     userId INT references users(id),
     PRIMARY KEY (id)
 );
+

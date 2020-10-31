@@ -8,7 +8,7 @@ const useUsers = () => {
   const [users, setUsers] = useState([]);
   // U had to send your api or an auth token on the headers
   useEffect(() => {
-    axios.get('/api/users')
+    axios.get('/api/users', { headers: { authorization: localStorage.getItem('token') } })
       .then(res => {
         console.log(res.data);
         setUsers(res.data);
@@ -26,3 +26,5 @@ const useUsers = () => {
 };
 
 export default useUsers;
+
+

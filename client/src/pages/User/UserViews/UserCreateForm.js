@@ -24,3 +24,4 @@ export const UserCreateForm = reduxForm({ form: 'userCreateForm' })((props) => {
     </form>
   );
 });
+
